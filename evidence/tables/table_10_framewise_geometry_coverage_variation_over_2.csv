@@ -1,0 +1,6 @@
+Statistic over frames 24-43,Geometry coverage (%),Render time per frame (s)
+Mean,94.42,17.53
+Standard deviation,0.44,1.88
+Minimum (frame 31),93.37,14.92
+Maximum (frame 39),95.12,21.88
+Peak-to-peak spread,1.75,6.96

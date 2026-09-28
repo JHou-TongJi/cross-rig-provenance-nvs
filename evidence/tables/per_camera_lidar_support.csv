@@ -1,0 +1,8 @@
+Target camera,HFOV (deg),Sensor (MP),Returns in frame,Returns per MP,Unknown cov. (%)
+Front Narrow,29.3,8.29,"17,032",2053,10.19
+Front Wide,90.0,8.29,"84,393",10175,0.61
+Back,53.5,2.07,"38,227",18435,4.11
+Back Right,82.9,2.07,"39,857",19221,4.46
+Back Left,83.2,2.07,"44,415",21419,1.63
+Front Right,81.5,2.07,"47,095",22712,1.37
+Front Left,83.0,2.07,"53,076",25596,1.05

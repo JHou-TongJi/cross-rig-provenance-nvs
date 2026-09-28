@@ -1,0 +1,53 @@
+{
+  "CAM_BACK": {
+    "frames": 4741,
+    "fps": 120.0,
+    "anchors": 80,
+    "span_s": 39.49997401237488,
+    "anchor_rate_hz": 2.000001315829986,
+    "frames_per_interval": 60.0,
+    "measured_fraction_pct": 1.69,
+    "mean_abs_diff": 0.3480879710705259,
+    "std_abs_diff": 0.08937954861179305,
+    "r2_interval": 0.4037003832418459,
+    "within_cv": 0.1756420982417501,
+    "between_cv": 0.16317335192896337,
+    "boundary_jump": 0.09891559855821423,
+    "interior_jump": 0.032660984051947534,
+    "jump_ratio": 3.0
+  },
+  "CAM_FRONT_NARROW": {
+    "frames": 4741,
+    "fps": 120.0,
+    "anchors": 80,
+    "span_s": 39.49997401237488,
+    "anchor_rate_hz": 2.000001315829986,
+    "frames_per_interval": 60.0,
+    "measured_fraction_pct": 1.69,
+    "mean_abs_diff": 0.4078203493096563,
+    "std_abs_diff": 0.08820810653777314,
+    "r2_interval": 0.31571745271077223,
+    "within_cv": 0.16260951943803736,
+    "between_cv": 0.12082498715931518,
+    "boundary_jump": 0.09462972940542759,
+    "interior_jump": 0.03488021818779104,
+    "jump_ratio": 2.7
+  },
+  "CAM_FRONT_RIGHT": {
+    "frames": 4741,
+    "fps": 120.0,
+    "anchors": 80,
+    "span_s": 39.49997401237488,
+    "anchor_rate_hz": 2.000001315829986,
+    "frames_per_interval": 60.0,
+    "measured_fraction_pct": 1.69,
+    "mean_abs_diff": 0.5452129906923647,
+    "std_abs_diff": 0.1642403032442435,
+    "r2_interval": 0.7639845837651756,
+    "within_cv": 0.1389438271623159,
+    "between_cv": 0.26314307143234394,
+    "boundary_jump": 0.14477188164033952,
+    "interior_jump": 0.04361366519192544,
+    "jump_ratio": 3.3
+  }
+}

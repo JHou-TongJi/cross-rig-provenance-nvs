@@ -1,0 +1,4 @@
+Task,Definition,Ground truth available,What a good result proves
+A. Strict leave-one-out,Hide camera j entirely; reconstruct it from the other six plus LiDAR,"Yes, the hidden image itself",The model exploits neighbouring fields of view and geometry to synthesize an unseen direction
+B. Same-name small-baseline,All seven cameras given; each target camera displaced to a nearby pose,"No, but the same-name source view is nearly aligned","The target pose enters the projection correctly; extrinsics, depth and continuity are consistent"
+C. True cross-vehicle,"Target cameras differ in position, orientation, intrinsics and field of view","No, unless a synchronized target platform was driven",The pipeline transfers a corpus to a new sensor configuration

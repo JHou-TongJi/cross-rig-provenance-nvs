@@ -1,0 +1,9 @@
+Sensor,Native resolution,fx (px),Horizontal FOV,Role in the pipeline
+CAMFRONTWIDE,3840 x 2160,1922,89.9 deg,Forward short-focal; best-supported target camera
+CAMFRONTNARROW,3840 x 2160,7340,29.3 deg,Forward long-focal; most sensitive to rig displacement
+CAMFRONTLEFT,1920 x 1080,1085,83.0 deg,Forward-left surround
+CAMFRONTRIGHT,1920 x 1080,1113,81.5 deg,Forward-right surround
+CAMBACKLEFT,1920 x 1080,1082,83.2 deg,Rear-left surround
+CAMBACKRIGHT,1920 x 1080,1087,82.9 deg,Rear-right surround
+CAMBACK,1920 x 1080,1903,53.5 deg,Rear medium-focal
+LIDARCONCAT,Concatenated sweep,-,-,"Metric anchors, occlusion ordering, scale constraint; never rendered as colour"

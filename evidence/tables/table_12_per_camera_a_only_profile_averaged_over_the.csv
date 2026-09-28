@@ -1,0 +1,8 @@
+Target camera,Observed cov. (%),Gate fill of hole (%),Generated / image (%),Vehicle risk in hole (%),Worst-band obs. cov. (%)
+Front Wide,99.35,26.09,0.55,0.04,98.97
+Front Narrow,97.96,45.19,1.18,24.23,96.67
+Front Left,97.84,35.04,1.47,0.50,96.31
+Front Right,98.91,72.49,0.36,3.86,98.38
+Back Left,96.46,32.10,2.52,0.11,92.19
+Back Right,97.75,44.68,1.33,3.15,95.84
+Back,99.38,58.70,0.28,2.73,98.97

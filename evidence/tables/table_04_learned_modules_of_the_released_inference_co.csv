@@ -1,0 +1,8 @@
+Module,Architecture,Role and constraint,Params,State
+Dense depth (DA3Metric-Large),External ViT,"Dense metric depth candidate; not ground truth, scale set by LiDAR",-,Frozen
+Semantic encoder (DINOv2),ViT-L/14 at 364 x 644; ViT-B/14 conditions the structure net,"Semantic context and correspondence; writes no colour, no depth",-,Frozen
+Feature upsampler (AnyUp),Multi-backbone head,Restores high-resolution feature boundaries,-,Frozen
+Structure network,"4-stage U-Net, 48 base channels, 384-channel bottleneck, 3-layer global transformer","Corrects DA3 scale and surface residual under LiDAR; writes depth only, never colour, never overwrites an anchor",26.49 M,Trained
+Residual decoder,"Restormer-Small, dim 48, blocks (4, 6, 6, 8)","Predicts RGB residual, modification strength and log uncertainty; restricted to the mask of Equation (20)",26.18 M,Trained
+Feature adapter,48 -> 32 channel Restormer adapter,Projects fused features for the decoder,0.09 M,Trained
+Trained total,,,52.76 M,

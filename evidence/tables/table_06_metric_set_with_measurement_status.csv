@@ -1,0 +1,16 @@
+Metric,Definition and denominator,Status
+Camera success rate,Fraction of requested target cameras that produced a complete output bundle,Measured
+Geometry coverage,"Pixels with trusted structural support, over the full frame",Measured
+Unknown fraction,"Pixels with neither observed support nor gate acceptance, measured on the geometry export before any completion, over the full frame",Measured
+Observed coverage,"Pixels with traceable calibrated source RGB support, over the full frame",Measured
+Gate fill of hole,"Hole pixels accepted by the cycle gate, over the hole set",Measured
+Generated fraction,"Pixels written by the completion module, over the full frame",Measured proxy
+Locked-pixel change,Count of observed pixels whose value changed; target is exactly zero,Measured
+Vehicle risk in hole,"Hole pixels intersecting vehicle regions, over the hole set",Measured
+Final visual coverage,"Pixels with a delivered colour, over the full frame; includes visual-only fill",Measured
+Near-black artefact audit,Suspect pixels and largest connected component among replaced pixels,Measured
+Coverage temporal spread,Standard deviation of geometry coverage over consecutive frames,Measured
+"Geometric error, semantic preservation, temporal anomaly rate",Depth MAE/RMSE against held-out LiDAR; feature similarity or mIoU on observed and gated pixels; optical-flow warping error and track continuity,Unmeasured
+Artefact rate,"Tears, ghosts and anomalous edges as connected components on the difference map",Proxy only
+Downstream retention,Detection and segmentation performance on reprojected versus original data,Unmeasured
+Target-view PSNR / SSIM / LPIPS,Photometric fidelity against a target-view reference,Not applicable

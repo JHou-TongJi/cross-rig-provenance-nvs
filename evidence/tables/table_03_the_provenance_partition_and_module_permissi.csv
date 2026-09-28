@@ -1,0 +1,6 @@
+Class,Admission condition,Exports depth,SE(3) eligible,May be modified later by
+Observed,Valid geometric correspondence to a calibrated source pixel,Yes,Yes,"Nothing; excluded from the modification mask of Equation (20) and from the display polish, so locked byte-exactly"
+Gate,"Hole pixel passing the source-target-source cycle, depth-ordering and dynamic-region tests",Yes,Conditional,"Residual decoder of Equation (20) wherever the geometric budget is non-zero, and display polish; a gate pixel the decoder writes is relabelled generated and loses depth eligibility"
+Generated,Residual hole filled by the masked completion module,No,No,Display polish only
+LiDAR anchor (support state),Direct LiDAR return surviving the z-buffer; a subtype of observed,Yes,Yes,"Nothing; locked as observed, and additionally restored byte-exactly after the polish as a redundant safeguard"
+Unknown (support state),Hole rejected by the gate and not completed; empty in the delivered RGB,No,No,Exported as a mask; never written into RGB as evidence

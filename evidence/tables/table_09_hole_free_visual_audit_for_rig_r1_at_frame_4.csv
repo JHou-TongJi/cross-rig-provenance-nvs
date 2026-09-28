@@ -1,0 +1,9 @@
+Target camera,Visual cov. (%),Pixels replaced,Suspect near-black,Largest component (px)
+Front Wide,100.00,"21,056",8,1
+Front Narrow,100.00,"81,734",37,3
+Front Left,100.00,"24,669",53,2
+Front Right,100.00,"41,883",9,2
+Back Left,100.00,"44,116",117,2
+Back Right,100.00,"103,190",33,2
+Back,100.00,"71,885",22,2
+Total / all cameras,100.00,"388,533",279,3

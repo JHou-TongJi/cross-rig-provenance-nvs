@@ -1,0 +1,61 @@
+experiment:
+  name: gcr_nvs_dinov2b_singleframe_v1
+  seed: 20260810
+  stage: phase_4_foundation_singleframe
+
+data:
+  train_sequences: 4
+  val_sequences: 1
+  test_sequences: 1
+  target_camera_policy: balanced_leave_one_out
+  strict_target_camera_drop_all_times: true
+  temporal_window: 1
+  source_views_min: 3
+  source_views_max: 5
+  image_size: [544, 960]
+  valid_crop: [540, 960]
+
+geometry:
+  lidar_source: LIDAR_CONCAT
+  pose_source: single_frame_or_verified_odometry
+  deskew: false_until_time_semantics_verified
+  max_range_m: 120
+  max_anchors: 120000
+  top_k_observations: 3
+  dynamic_temporal_policy: current_frame_only
+
+encoder:
+  semantic_backbone: dinov2_vitb14
+  semantic_pretrained: true
+  semantic_frozen: true
+  semantic_input_size: [476, 840]
+  semantic_adapter_channels: 64
+  detail_backbone: shallow_naf
+
+fusion:
+  observation_dim: 144
+  anchor_feature_dim: 64
+  rendered_feature_dim: 32
+  top_k: 3
+  max_color_residual: 0.05
+
+renderer:
+  backend: deterministic_surfel
+  channels: 12
+  render_feature_channels: 32
+
+refiner:
+  type: restormer_small_then_lite_decoder
+  input_channels: 48
+  base_channels: 48
+  max_rgb_residual: 0.25
+  use_confidence_gate: true
+
+train:
+  batch_size: 1
+  gradient_accumulation: 8
+  precision: fp16
+  optimizer: adamw
+  learning_rate: 0.0001
+  gradient_clip_norm: 1.0
+  early_stopping: true

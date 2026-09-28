@@ -1,0 +1,12 @@
+rig_id: l4_frontwide_up_20cm
+vehicle_frame:
+  convention: x_forward_y_left_z_up
+  source_frame: ego
+cameras:
+  - name: CAM_FRONT_WIDE
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_WIDE
+    vehicle_offset_m: [0.0, 0.0, 0.20]
+    T_camera_from_vehicle: identity

@@ -1,0 +1,8 @@
+﻿category,metric,value,scope,interpretation
+completion,camera_success_rate,1.0,frame 40 / 7 cameras,all seven requests succeeded
+geometry,mean_geometry_coverage,0.9666272597001765,frame 40 / 7 cameras,measured RGB-D/Surfel geometry only
+geometry,mean_unknown_coverage,0.03343584656084656,frame 40 / 7 cameras,unobserved or rejected geometry
+visual,mean_final_visual_coverage,1.0,frame 40 / 7 cameras,includes visual-only completion
+geometry,hard_lidar_anchor_policy,preserved,all cameras,generated RGB does not overwrite anchors
+temporal,continuous_demo,available,frames 24-43,visual and geometry outputs separately audited
+ground_truth,target_view_gt,unavailable,organizer has not supplied target GT,proxy metrics used; no target PSNR claim

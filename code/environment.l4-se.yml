@@ -1,0 +1,17 @@
+name: l4-se-viewer
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.26
+  - scipy=1.11
+  - pillow=10
+  - pip:
+      - Flask==2.3.3
+      - opencv-python==4.10.0.84
+      - tqdm==4.66.5
+
+# Depth Anything 3 and Gaussian Splatting remain separate GPU environments.
+# Their source revisions, model paths and observed runtime versions are listed
+# in submission/03_engineering/model_manifest.md.

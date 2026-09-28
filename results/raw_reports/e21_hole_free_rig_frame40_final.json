@@ -1,0 +1,1081 @@
+{
+ "ok": true,
+ "report": {
+  "record_id": "20260813_194828_rig_9bf21a",
+  "frame": 40,
+  "T_L_R_view": [
+   [
+    0.9993908270190958,
+    0.0,
+    0.03489949670250097,
+    0.1
+   ],
+   [
+    0.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   [
+    -0.03489949670250097,
+    0.0,
+    0.9993908270190958,
+    0.35
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "mounts_R_Ci": "withheld: derived from source calibration not redistributed",
+  "camera_count": 7,
+  "failures": [],
+  "mean_coverage": 0.9407379850088182,
+  "mean_unknown_coverage": 0.059421020723104054,
+  "mean_final_visual_coverage": 1.0,
+  "all_final_visual_hole_free": true,
+  "rows": [
+   {
+    "camera": "CAM_BACK_LEFT",
+    "record_id": "20260813_194627_71d2cb77",
+    "T_L_Ci_view": "withheld: derived from source calibration not redistributed",
+    "T_Ci_L_view": "withheld: derived from source calibration not redistributed",
+    "coverage": 0.9506500771604939,
+    "surfel_coverage": 0.9505189043209876,
+    "multiview_only_coverage": 0.016684027777777777,
+    "rig_multiview_only_coverage": 0.001851851851851852,
+    "unknown_coverage": 0.04948109567901235,
+    "final_visual_coverage": 1.0,
+    "final_visual_hole_free": true,
+    "unknown_reason_counts": {
+     "CURRENT_REJECTED": 0,
+     "MANIFOLD_REJECTED": 0,
+     "MULTIVIEW_REJECTED": 953,
+     "NO_OBSERVATION": 21119,
+     "OTHER_UNKNOWN": 0,
+     "RASTER_SUPPORT_REJECTED": 1694,
+     "TEMPORAL_REJECTED": 1885
+    },
+    "unknown_reason_regions": {
+     "border_10pct": {
+      "pixels": 186624,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 259,
+       "NO_OBSERVATION": 14470,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 981,
+       "TEMPORAL_REJECTED": 36
+      },
+      "unknown_pixels": 15746,
+      "unknown_ratio": 0.08437285665294925
+     },
+     "far_neighborhood_gt_40m": {
+      "pixels": 125896,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 248,
+       "NO_OBSERVATION": 2872,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 285,
+       "TEMPORAL_REJECTED": 1207
+      },
+      "unknown_pixels": 4612,
+      "unknown_ratio": 0.03663341170489928
+     },
+     "full": {
+      "pixels": 518400,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 953,
+       "NO_OBSERVATION": 21119,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 1694,
+       "TEMPORAL_REJECTED": 1885
+      },
+      "unknown_pixels": 25651,
+      "unknown_ratio": 0.04948109567901235
+     }
+    },
+    "candidate_coverage": {
+     "any_accepted": 0.9153086419753086,
+     "any_raw": 0.912818287037037,
+     "current_accepted": 0.8612017746913581,
+     "current_raw": 0.8478105709876543,
+     "manifold_accepted": 0.0,
+     "manifold_raw": 0.0,
+     "multiview_accepted": 0.016684027777777777,
+     "multiview_raw": 0.2468460648148148,
+     "rig_multiview_accepted": 0.00668016975308642,
+     "rig_multiview_raw": 0.14986496913580247,
+     "temporal_accepted": 0.03074266975308642,
+     "temporal_raw": 0.3480729166666667
+    },
+    "rig_multiview_guard": {
+     "accepted_components": 535,
+     "accepted_pixels": 960,
+     "camera": "CAM_BACK_LEFT",
+     "candidate_components": 1499,
+     "candidate_pixels": 3463,
+     "depth_tolerance": "max(0.25m, 0.04 * depth)",
+     "enabled": true,
+     "link_radius_px": 2,
+     "minimum_boundary_pixels": 2,
+     "minimum_depth_agreement": 0.9,
+     "rejected_boundary_support_components": 26,
+     "rejected_depth_agreement_components": 836,
+     "rejected_no_boundary_components": 102
+    },
+    "se3_information_domain": {
+     "counts": {
+      "HARD_SE3": 46861,
+      "ROTATION_DOMINANT_FINITE": 71852,
+      "SO3_SKY": 28303,
+      "SOFT_SE3": 345942,
+      "VISUAL_ONLY_UNKNOWN": 25442
+     },
+     "domain_legend": {
+      "0": "VISUAL_ONLY_UNKNOWN",
+      "1": "HARD_SE3",
+      "2": "SOFT_SE3",
+      "3": "ROTATION_DOMINANT_FINITE",
+      "4": "SO3_SKY"
+     },
+     "enabled": true,
+     "exports_depth_pixels": 464655,
+     "fractions": {
+      "HARD_SE3": 0.0903954475308642,
+      "ROTATION_DOMINANT_FINITE": 0.1386033950617284,
+      "SO3_SKY": 0.05459683641975309,
+      "SOFT_SE3": 0.6673263888888888,
+      "VISUAL_ONLY_UNKNOWN": 0.04907793209876543
+     },
+     "generated_geometry_policy": "translation_weight=0; rotation_weight=0; exports_depth=false",
+     "pixel_uncertainty_median": 1.1293784379959106,
+     "rigid_renderable_pixels": 464655,
+     "rotation_weight_mean": 0.13993245363235474,
+     "se3_eligible_pixels": 464630,
+     "translation_weight_mean": 0.2100430279970169
+    },
+    "elapsed_s": 20.307315587997437,
+    "urls": {
+     "comparison": "/renders/20260813_194627_71d2cb77_comparison.jpg",
+     "depth_projection": "/renders/20260813_194627_71d2cb77_depth_projection.jpg",
+     "final_hole_free_rgb": "/renders/20260813_194627_71d2cb77_visual_compensation.jpg",
+     "gs_fill": "/renders/20260813_194627_71d2cb77_gs_fill.jpg",
+     "gs_fill_depth": "/renders/20260813_194627_71d2cb77_gs_fill_depth.jpg",
+     "hybrid_source_map": "/renders/20260813_194627_71d2cb77_hybrid_source_map.jpg",
+     "lidar_projection": "/renders/20260813_194627_71d2cb77_lidar_projection.jpg",
+     "reconstruction": "/renders/20260813_194627_71d2cb77_reconstruction.jpg",
+     "reconstruction_depth": "/renders/20260813_194627_71d2cb77_reconstruction_depth.jpg",
+     "reconstruction_depth_surfel": "/renders/20260813_194627_71d2cb77_reconstruction_depth_surfel.jpg",
+     "reconstruction_surfel": "/renders/20260813_194627_71d2cb77_reconstruction_surfel.jpg",
+     "rotation_weight_map": "/renders/20260813_194627_71d2cb77_rotation_weight_map.jpg",
+     "se3_domain_map": "/renders/20260813_194627_71d2cb77_se3_domain_map.jpg",
+     "source": "/renders/20260813_194627_71d2cb77_source.jpg",
+     "translation_weight_map": "/renders/20260813_194627_71d2cb77_translation_weight_map.jpg",
+     "unknown_reason_map": "/renders/20260813_194627_71d2cb77_unknown_reason_map.jpg",
+     "visual_comparison": "/renders/20260813_194627_71d2cb77_visual_comparison.jpg",
+     "visual_compensation": "/renders/20260813_194627_71d2cb77_visual_compensation.jpg",
+     "visual_source_map": "/renders/20260813_194627_71d2cb77_visual_source_map.jpg"
+    }
+   },
+   {
+    "camera": "CAM_FRONT_LEFT",
+    "record_id": "20260813_194640_80c5d1eb",
+    "T_L_Ci_view": "withheld: derived from source calibration not redistributed",
+    "T_Ci_L_view": "withheld: derived from source calibration not redistributed",
+    "coverage": 0.9767091049382716,
+    "surfel_coverage": 0.976616512345679,
+    "multiview_only_coverage": 0.01556712962962963,
+    "rig_multiview_only_coverage": 0.002752700617283951,
+    "unknown_coverage": 0.023383487654320988,
+    "final_visual_coverage": 1.0,
+    "final_visual_hole_free": true,
+    "unknown_reason_counts": {
+     "CURRENT_REJECTED": 0,
+     "MANIFOLD_REJECTED": 0,
+     "MULTIVIEW_REJECTED": 1095,
+     "NO_OBSERVATION": 9849,
+     "OTHER_UNKNOWN": 0,
+     "RASTER_SUPPORT_REJECTED": 713,
+     "TEMPORAL_REJECTED": 465
+    },
+    "unknown_reason_regions": {
+     "border_10pct": {
+      "pixels": 186624,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 389,
+       "NO_OBSERVATION": 4088,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 282,
+       "TEMPORAL_REJECTED": 30
+      },
+      "unknown_pixels": 4789,
+      "unknown_ratio": 0.02566122256515775
+     },
+     "far_neighborhood_gt_40m": {
+      "pixels": 38817,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 113,
+       "NO_OBSERVATION": 1250,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 227,
+       "TEMPORAL_REJECTED": 156
+      },
+      "unknown_pixels": 1746,
+      "unknown_ratio": 0.04498029214004173
+     },
+     "full": {
+      "pixels": 518400,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 1095,
+       "NO_OBSERVATION": 9849,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 713,
+       "TEMPORAL_REJECTED": 465
+      },
+      "unknown_pixels": 12122,
+      "unknown_ratio": 0.023383487654320988
+     }
+    },
+    "candidate_coverage": {
+     "any_accepted": 0.9485358796296296,
+     "any_raw": 0.9389004629629629,
+     "current_accepted": 0.907818287037037,
+     "current_raw": 0.8827121913580247,
+     "manifold_accepted": 0.0,
+     "manifold_raw": 0.0,
+     "multiview_accepted": 0.01556712962962963,
+     "multiview_raw": 0.39989969135802467,
+     "rig_multiview_accepted": 0.004737654320987654,
+     "rig_multiview_raw": 0.19428047839506174,
+     "temporal_accepted": 0.020412808641975307,
+     "temporal_raw": 0.3592283950617284
+    },
+    "rig_multiview_guard": {
+     "accepted_components": 866,
+     "accepted_pixels": 1427,
+     "camera": "CAM_FRONT_LEFT",
+     "candidate_components": 1447,
+     "candidate_pixels": 2456,
+     "depth_tolerance": "max(0.25m, 0.04 * depth)",
+     "enabled": true,
+     "link_radius_px": 2,
+     "minimum_boundary_pixels": 2,
+     "minimum_depth_agreement": 0.9,
+     "rejected_boundary_support_components": 7,
+     "rejected_depth_agreement_components": 566,
+     "rejected_no_boundary_components": 8
+    },
+    "se3_information_domain": {
+     "counts": {
+      "HARD_SE3": 7341,
+      "ROTATION_DOMINANT_FINITE": 27955,
+      "SO3_SKY": 5670,
+      "SOFT_SE3": 465590,
+      "VISUAL_ONLY_UNKNOWN": 11844
+     },
+     "domain_legend": {
+      "0": "VISUAL_ONLY_UNKNOWN",
+      "1": "HARD_SE3",
+      "2": "SOFT_SE3",
+      "3": "ROTATION_DOMINANT_FINITE",
+      "4": "SO3_SKY"
+     },
+     "enabled": true,
+     "exports_depth_pixels": 500886,
+     "fractions": {
+      "HARD_SE3": 0.01416087962962963,
+      "ROTATION_DOMINANT_FINITE": 0.05392554012345679,
+      "SO3_SKY": 0.0109375,
+      "SOFT_SE3": 0.8981288580246913,
+      "VISUAL_ONLY_UNKNOWN": 0.022847222222222224
+     },
+     "generated_geometry_policy": "translation_weight=0; rotation_weight=0; exports_depth=false",
+     "pixel_uncertainty_median": 1.2551469802856445,
+     "rigid_renderable_pixels": 500886,
+     "rotation_weight_mean": 0.13750407099723816,
+     "se3_eligible_pixels": 500833,
+     "translation_weight_mean": 0.2685070037841797
+    },
+    "elapsed_s": 13.033907651901245,
+    "urls": {
+     "comparison": "/renders/20260813_194640_80c5d1eb_comparison.jpg",
+     "depth_projection": "/renders/20260813_194640_80c5d1eb_depth_projection.jpg",
+     "final_hole_free_rgb": "/renders/20260813_194640_80c5d1eb_visual_compensation.jpg",
+     "gs_fill": "/renders/20260813_194640_80c5d1eb_gs_fill.jpg",
+     "gs_fill_depth": "/renders/20260813_194640_80c5d1eb_gs_fill_depth.jpg",
+     "hybrid_source_map": "/renders/20260813_194640_80c5d1eb_hybrid_source_map.jpg",
+     "lidar_projection": "/renders/20260813_194640_80c5d1eb_lidar_projection.jpg",
+     "reconstruction": "/renders/20260813_194640_80c5d1eb_reconstruction.jpg",
+     "reconstruction_depth": "/renders/20260813_194640_80c5d1eb_reconstruction_depth.jpg",
+     "reconstruction_depth_surfel": "/renders/20260813_194640_80c5d1eb_reconstruction_depth_surfel.jpg",
+     "reconstruction_surfel": "/renders/20260813_194640_80c5d1eb_reconstruction_surfel.jpg",
+     "rotation_weight_map": "/renders/20260813_194640_80c5d1eb_rotation_weight_map.jpg",
+     "se3_domain_map": "/renders/20260813_194640_80c5d1eb_se3_domain_map.jpg",
+     "source": "/renders/20260813_194640_80c5d1eb_source.jpg",
+     "translation_weight_map": "/renders/20260813_194640_80c5d1eb_translation_weight_map.jpg",
+     "unknown_reason_map": "/renders/20260813_194640_80c5d1eb_unknown_reason_map.jpg",
+     "visual_comparison": "/renders/20260813_194640_80c5d1eb_visual_comparison.jpg",
+     "visual_compensation": "/renders/20260813_194640_80c5d1eb_visual_compensation.jpg",
+     "visual_source_map": "/renders/20260813_194640_80c5d1eb_visual_source_map.jpg"
+    }
+   },
+   {
+    "camera": "CAM_FRONT_RIGHT",
+    "record_id": "20260813_194656_d4e72877",
+    "T_L_Ci_view": "withheld: derived from source calibration not redistributed",
+    "T_Ci_L_view": "withheld: derived from source calibration not redistributed",
+    "coverage": 0.9727314814814815,
+    "surfel_coverage": 0.972662037037037,
+    "multiview_only_coverage": 0.016375385802469136,
+    "rig_multiview_only_coverage": 0.004164737654320988,
+    "unknown_coverage": 0.027337962962962963,
+    "final_visual_coverage": 1.0,
+    "final_visual_hole_free": true,
+    "unknown_reason_counts": {
+     "CURRENT_REJECTED": 0,
+     "MANIFOLD_REJECTED": 0,
+     "MULTIVIEW_REJECTED": 518,
+     "NO_OBSERVATION": 11865,
+     "OTHER_UNKNOWN": 0,
+     "RASTER_SUPPORT_REJECTED": 1360,
+     "TEMPORAL_REJECTED": 429
+    },
+    "unknown_reason_regions": {
+     "border_10pct": {
+      "pixels": 186624,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 183,
+       "NO_OBSERVATION": 4560,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 498,
+       "TEMPORAL_REJECTED": 32
+      },
+      "unknown_pixels": 5273,
+      "unknown_ratio": 0.028254672496570644
+     },
+     "far_neighborhood_gt_40m": {
+      "pixels": 58435,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 46,
+       "NO_OBSERVATION": 895,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 145,
+       "TEMPORAL_REJECTED": 203
+      },
+      "unknown_pixels": 1289,
+      "unknown_ratio": 0.022058697698297252
+     },
+     "full": {
+      "pixels": 518400,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 518,
+       "NO_OBSERVATION": 11865,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 1360,
+       "TEMPORAL_REJECTED": 429
+      },
+      "unknown_pixels": 14172,
+      "unknown_ratio": 0.027337962962962963
+     }
+    },
+    "candidate_coverage": {
+     "any_accepted": 0.9351755401234568,
+     "any_raw": 0.9241570216049383,
+     "current_accepted": 0.8866859567901234,
+     "current_raw": 0.8648263888888889,
+     "manifold_accepted": 0.0,
+     "manifold_raw": 0.0,
+     "multiview_accepted": 0.016375385802469136,
+     "multiview_raw": 0.3125077160493827,
+     "rig_multiview_accepted": 0.008454861111111111,
+     "rig_multiview_raw": 0.20369020061728396,
+     "temporal_accepted": 0.023659336419753086,
+     "temporal_raw": 0.2756172839506173
+    },
+    "rig_multiview_guard": {
+     "accepted_components": 1232,
+     "accepted_pixels": 2159,
+     "camera": "CAM_FRONT_RIGHT",
+     "candidate_components": 2614,
+     "candidate_pixels": 4383,
+     "depth_tolerance": "max(0.25m, 0.04 * depth)",
+     "enabled": true,
+     "link_radius_px": 2,
+     "minimum_boundary_pixels": 2,
+     "minimum_depth_agreement": 0.9,
+     "rejected_boundary_support_components": 8,
+     "rejected_depth_agreement_components": 1281,
+     "rejected_no_boundary_components": 93
+    },
+    "se3_information_domain": {
+     "counts": {
+      "HARD_SE3": 11284,
+      "ROTATION_DOMINANT_FINITE": 39620,
+      "SO3_SKY": 92701,
+      "SOFT_SE3": 361878,
+      "VISUAL_ONLY_UNKNOWN": 12917
+     },
+     "domain_legend": {
+      "0": "VISUAL_ONLY_UNKNOWN",
+      "1": "HARD_SE3",
+      "2": "SOFT_SE3",
+      "3": "ROTATION_DOMINANT_FINITE",
+      "4": "SO3_SKY"
+     },
+     "enabled": true,
+     "exports_depth_pixels": 412782,
+     "fractions": {
+      "HARD_SE3": 0.021766975308641974,
+      "ROTATION_DOMINANT_FINITE": 0.07642746913580246,
+      "SO3_SKY": 0.1788213734567901,
+      "SOFT_SE3": 0.6980671296296296,
+      "VISUAL_ONLY_UNKNOWN": 0.0249170524691358
+     },
+     "generated_geometry_policy": "translation_weight=0; rotation_weight=0; exports_depth=false",
+     "pixel_uncertainty_median": 1.2649545669555664,
+     "rigid_renderable_pixels": 412782,
+     "rotation_weight_mean": 0.12689417600631714,
+     "se3_eligible_pixels": 412302,
+     "translation_weight_mean": 0.205644890666008
+    },
+    "elapsed_s": 15.968047618865967,
+    "urls": {
+     "comparison": "/renders/20260813_194656_d4e72877_comparison.jpg",
+     "depth_projection": "/renders/20260813_194656_d4e72877_depth_projection.jpg",
+     "final_hole_free_rgb": "/renders/20260813_194656_d4e72877_visual_compensation.jpg",
+     "gs_fill": "/renders/20260813_194656_d4e72877_gs_fill.jpg",
+     "gs_fill_depth": "/renders/20260813_194656_d4e72877_gs_fill_depth.jpg",
+     "hybrid_source_map": "/renders/20260813_194656_d4e72877_hybrid_source_map.jpg",
+     "lidar_projection": "/renders/20260813_194656_d4e72877_lidar_projection.jpg",
+     "reconstruction": "/renders/20260813_194656_d4e72877_reconstruction.jpg",
+     "reconstruction_depth": "/renders/20260813_194656_d4e72877_reconstruction_depth.jpg",
+     "reconstruction_depth_surfel": "/renders/20260813_194656_d4e72877_reconstruction_depth_surfel.jpg",
+     "reconstruction_surfel": "/renders/20260813_194656_d4e72877_reconstruction_surfel.jpg",
+     "rotation_weight_map": "/renders/20260813_194656_d4e72877_rotation_weight_map.jpg",
+     "se3_domain_map": "/renders/20260813_194656_d4e72877_se3_domain_map.jpg",
+     "source": "/renders/20260813_194656_d4e72877_source.jpg",
+     "translation_weight_map": "/renders/20260813_194656_d4e72877_translation_weight_map.jpg",
+     "unknown_reason_map": "/renders/20260813_194656_d4e72877_unknown_reason_map.jpg",
+     "visual_comparison": "/renders/20260813_194656_d4e72877_visual_comparison.jpg",
+     "visual_compensation": "/renders/20260813_194656_d4e72877_visual_compensation.jpg",
+     "visual_source_map": "/renders/20260813_194656_d4e72877_visual_source_map.jpg"
+    }
+   },
+   {
+    "camera": "CAM_BACK_RIGHT",
+    "record_id": "20260813_194722_ce51848c",
+    "T_L_Ci_view": "withheld: derived from source calibration not redistributed",
+    "T_Ci_L_view": "withheld: derived from source calibration not redistributed",
+    "coverage": 0.8949266975308642,
+    "surfel_coverage": 0.8948842592592593,
+    "multiview_only_coverage": 0.017075617283950618,
+    "rig_multiview_only_coverage": 0.0019772376543209878,
+    "unknown_coverage": 0.10511574074074075,
+    "final_visual_coverage": 1.0,
+    "final_visual_hole_free": true,
+    "unknown_reason_counts": {
+     "CURRENT_REJECTED": 0,
+     "MANIFOLD_REJECTED": 0,
+     "MULTIVIEW_REJECTED": 1509,
+     "NO_OBSERVATION": 47406,
+     "OTHER_UNKNOWN": 0,
+     "RASTER_SUPPORT_REJECTED": 3163,
+     "TEMPORAL_REJECTED": 2414
+    },
+    "unknown_reason_regions": {
+     "border_10pct": {
+      "pixels": 186624,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 342,
+       "NO_OBSERVATION": 26299,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 1349,
+       "TEMPORAL_REJECTED": 95
+      },
+      "unknown_pixels": 28085,
+      "unknown_ratio": 0.1504897548010974
+     },
+     "far_neighborhood_gt_40m": {
+      "pixels": 161644,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 675,
+       "NO_OBSERVATION": 21054,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 1010,
+       "TEMPORAL_REJECTED": 1498
+      },
+      "unknown_pixels": 24237,
+      "unknown_ratio": 0.1499406102298879
+     },
+     "full": {
+      "pixels": 518400,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 1509,
+       "NO_OBSERVATION": 47406,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 3163,
+       "TEMPORAL_REJECTED": 2414
+      },
+      "unknown_pixels": 54492,
+      "unknown_ratio": 0.10511574074074075
+     }
+    },
+    "candidate_coverage": {
+     "any_accepted": 0.8635281635802469,
+     "any_raw": 0.8641435185185186,
+     "current_accepted": 0.8036902006172839,
+     "current_raw": 0.7905902777777778,
+     "manifold_accepted": 0.0,
+     "manifold_raw": 0.0,
+     "multiview_accepted": 0.017075617283950618,
+     "multiview_raw": 0.21123456790123457,
+     "rig_multiview_accepted": 0.010179398148148147,
+     "rig_multiview_raw": 0.14540123456790124,
+     "temporal_accepted": 0.0325829475308642,
+     "temporal_raw": 0.2892631172839506
+    },
+    "rig_multiview_guard": {
+     "accepted_components": 606,
+     "accepted_pixels": 1025,
+     "camera": "CAM_BACK_RIGHT",
+     "candidate_components": 2714,
+     "candidate_pixels": 5277,
+     "depth_tolerance": "max(0.25m, 0.04 * depth)",
+     "enabled": true,
+     "link_radius_px": 2,
+     "minimum_boundary_pixels": 2,
+     "minimum_depth_agreement": 0.9,
+     "rejected_boundary_support_components": 43,
+     "rejected_depth_agreement_components": 1857,
+     "rejected_no_boundary_components": 208
+    },
+    "se3_information_domain": {
+     "counts": {
+      "HARD_SE3": 43226,
+      "ROTATION_DOMINANT_FINITE": 41790,
+      "SO3_SKY": 60277,
+      "SOFT_SE3": 320865,
+      "VISUAL_ONLY_UNKNOWN": 52242
+     },
+     "domain_legend": {
+      "0": "VISUAL_ONLY_UNKNOWN",
+      "1": "HARD_SE3",
+      "2": "SOFT_SE3",
+      "3": "ROTATION_DOMINANT_FINITE",
+      "4": "SO3_SKY"
+     },
+     "enabled": true,
+     "exports_depth_pixels": 405881,
+     "fractions": {
+      "HARD_SE3": 0.08338348765432099,
+      "ROTATION_DOMINANT_FINITE": 0.08061342592592592,
+      "SO3_SKY": 0.11627507716049383,
+      "SOFT_SE3": 0.6189525462962963,
+      "VISUAL_ONLY_UNKNOWN": 0.10077546296296297
+     },
+     "generated_geometry_policy": "translation_weight=0; rotation_weight=0; exports_depth=false",
+     "pixel_uncertainty_median": 1.1886277198791504,
+     "rigid_renderable_pixels": 405881,
+     "rotation_weight_mean": 0.12754203379154205,
+     "se3_eligible_pixels": 405112,
+     "translation_weight_mean": 0.20454710721969604
+    },
+    "elapsed_s": 25.53736424446106,
+    "urls": {
+     "comparison": "/renders/20260813_194722_ce51848c_comparison.jpg",
+     "depth_projection": "/renders/20260813_194722_ce51848c_depth_projection.jpg",
+     "final_hole_free_rgb": "/renders/20260813_194722_ce51848c_visual_compensation.jpg",
+     "gs_fill": "/renders/20260813_194722_ce51848c_gs_fill.jpg",
+     "gs_fill_depth": "/renders/20260813_194722_ce51848c_gs_fill_depth.jpg",
+     "hybrid_source_map": "/renders/20260813_194722_ce51848c_hybrid_source_map.jpg",
+     "lidar_projection": "/renders/20260813_194722_ce51848c_lidar_projection.jpg",
+     "reconstruction": "/renders/20260813_194722_ce51848c_reconstruction.jpg",
+     "reconstruction_depth": "/renders/20260813_194722_ce51848c_reconstruction_depth.jpg",
+     "reconstruction_depth_surfel": "/renders/20260813_194722_ce51848c_reconstruction_depth_surfel.jpg",
+     "reconstruction_surfel": "/renders/20260813_194722_ce51848c_reconstruction_surfel.jpg",
+     "rotation_weight_map": "/renders/20260813_194722_ce51848c_rotation_weight_map.jpg",
+     "se3_domain_map": "/renders/20260813_194722_ce51848c_se3_domain_map.jpg",
+     "source": "/renders/20260813_194722_ce51848c_source.jpg",
+     "translation_weight_map": "/renders/20260813_194722_ce51848c_translation_weight_map.jpg",
+     "unknown_reason_map": "/renders/20260813_194722_ce51848c_unknown_reason_map.jpg",
+     "visual_comparison": "/renders/20260813_194722_ce51848c_visual_comparison.jpg",
+     "visual_compensation": "/renders/20260813_194722_ce51848c_visual_compensation.jpg",
+     "visual_source_map": "/renders/20260813_194722_ce51848c_visual_source_map.jpg"
+    }
+   },
+   {
+    "camera": "CAM_BACK",
+    "record_id": "20260813_194742_3955c012",
+    "T_L_Ci_view": "withheld: derived from source calibration not redistributed",
+    "T_Ci_L_view": "withheld: derived from source calibration not redistributed",
+    "coverage": 0.914278549382716,
+    "surfel_coverage": 0.9140181327160494,
+    "multiview_only_coverage": 0.05429976851851852,
+    "rig_multiview_only_coverage": 0.0013869598765432099,
+    "unknown_coverage": 0.08598186728395062,
+    "final_visual_coverage": 1.0,
+    "final_visual_hole_free": true,
+    "unknown_reason_counts": {
+     "CURRENT_REJECTED": 0,
+     "MANIFOLD_REJECTED": 0,
+     "MULTIVIEW_REJECTED": 745,
+     "NO_OBSERVATION": 41229,
+     "OTHER_UNKNOWN": 0,
+     "RASTER_SUPPORT_REJECTED": 2224,
+     "TEMPORAL_REJECTED": 375
+    },
+    "unknown_reason_regions": {
+     "border_10pct": {
+      "pixels": 186624,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 120,
+       "NO_OBSERVATION": 25176,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 1748,
+       "TEMPORAL_REJECTED": 26
+      },
+      "unknown_pixels": 27070,
+      "unknown_ratio": 0.14505101165980797
+     },
+     "far_neighborhood_gt_40m": {
+      "pixels": 157033,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 442,
+       "NO_OBSERVATION": 12941,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 424,
+       "TEMPORAL_REJECTED": 299
+      },
+      "unknown_pixels": 14106,
+      "unknown_ratio": 0.08982825266026886
+     },
+     "full": {
+      "pixels": 518400,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 745,
+       "NO_OBSERVATION": 41229,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 2224,
+       "TEMPORAL_REJECTED": 375
+      },
+      "unknown_pixels": 44573,
+      "unknown_ratio": 0.08598186728395062
+     }
+    },
+    "candidate_coverage": {
+     "any_accepted": 0.8755304783950617,
+     "any_raw": 0.87,
+     "current_accepted": 0.7827353395061728,
+     "current_raw": 0.7696875,
+     "manifold_accepted": 0.0,
+     "manifold_raw": 0.0,
+     "multiview_accepted": 0.05429976851851852,
+     "multiview_raw": 0.3834606481481482,
+     "rig_multiview_accepted": 0.0072743055555555556,
+     "rig_multiview_raw": 0.07669753086419753,
+     "temporal_accepted": 0.031221064814814816,
+     "temporal_raw": 0.2934818672839506
+    },
+    "rig_multiview_guard": {
+     "accepted_components": 701,
+     "accepted_pixels": 719,
+     "camera": "CAM_BACK",
+     "candidate_components": 3034,
+     "candidate_pixels": 3771,
+     "depth_tolerance": "max(0.25m, 0.04 * depth)",
+     "enabled": true,
+     "link_radius_px": 2,
+     "minimum_boundary_pixels": 2,
+     "minimum_depth_agreement": 0.9,
+     "rejected_boundary_support_components": 32,
+     "rejected_depth_agreement_components": 1685,
+     "rejected_no_boundary_components": 616
+    },
+    "se3_information_domain": {
+     "counts": {
+      "HARD_SE3": 10102,
+      "ROTATION_DOMINANT_FINITE": 85206,
+      "SO3_SKY": 16414,
+      "SOFT_SE3": 366872,
+      "VISUAL_ONLY_UNKNOWN": 39806
+     },
+     "domain_legend": {
+      "0": "VISUAL_ONLY_UNKNOWN",
+      "1": "HARD_SE3",
+      "2": "SOFT_SE3",
+      "3": "ROTATION_DOMINANT_FINITE",
+      "4": "SO3_SKY"
+     },
+     "enabled": true,
+     "exports_depth_pixels": 462180,
+     "fractions": {
+      "HARD_SE3": 0.019486882716049383,
+      "ROTATION_DOMINANT_FINITE": 0.16436342592592593,
+      "SO3_SKY": 0.03166280864197531,
+      "SOFT_SE3": 0.7077006172839506,
+      "VISUAL_ONLY_UNKNOWN": 0.07678626543209877
+     },
+     "generated_geometry_policy": "translation_weight=0; rotation_weight=0; exports_depth=false",
+     "pixel_uncertainty_median": 1.6097062826156616,
+     "rigid_renderable_pixels": 462180,
+     "rotation_weight_mean": 0.1539318859577179,
+     "se3_eligible_pixels": 462180,
+     "translation_weight_mean": 0.1636820286512375
+    },
+    "elapsed_s": 20.19403314590454,
+    "urls": {
+     "comparison": "/renders/20260813_194742_3955c012_comparison.jpg",
+     "depth_projection": "/renders/20260813_194742_3955c012_depth_projection.jpg",
+     "final_hole_free_rgb": "/renders/20260813_194742_3955c012_visual_compensation.jpg",
+     "gs_fill": "/renders/20260813_194742_3955c012_gs_fill.jpg",
+     "gs_fill_depth": "/renders/20260813_194742_3955c012_gs_fill_depth.jpg",
+     "hybrid_source_map": "/renders/20260813_194742_3955c012_hybrid_source_map.jpg",
+     "lidar_projection": "/renders/20260813_194742_3955c012_lidar_projection.jpg",
+     "reconstruction": "/renders/20260813_194742_3955c012_reconstruction.jpg",
+     "reconstruction_depth": "/renders/20260813_194742_3955c012_reconstruction_depth.jpg",
+     "reconstruction_depth_surfel": "/renders/20260813_194742_3955c012_reconstruction_depth_surfel.jpg",
+     "reconstruction_surfel": "/renders/20260813_194742_3955c012_reconstruction_surfel.jpg",
+     "rotation_weight_map": "/renders/20260813_194742_3955c012_rotation_weight_map.jpg",
+     "se3_domain_map": "/renders/20260813_194742_3955c012_se3_domain_map.jpg",
+     "source": "/renders/20260813_194742_3955c012_source.jpg",
+     "translation_weight_map": "/renders/20260813_194742_3955c012_translation_weight_map.jpg",
+     "unknown_reason_map": "/renders/20260813_194742_3955c012_unknown_reason_map.jpg",
+     "visual_comparison": "/renders/20260813_194742_3955c012_visual_comparison.jpg",
+     "visual_compensation": "/renders/20260813_194742_3955c012_visual_compensation.jpg",
+     "visual_source_map": "/renders/20260813_194742_3955c012_visual_source_map.jpg"
+    }
+   },
+   {
+    "camera": "CAM_FRONT_WIDE",
+    "record_id": "20260813_194757_07b8e723",
+    "T_L_Ci_view": "withheld: derived from source calibration not redistributed",
+    "T_Ci_L_view": "withheld: derived from source calibration not redistributed",
+    "coverage": 0.9882503858024692,
+    "surfel_coverage": 0.9881481481481481,
+    "multiview_only_coverage": 0.024405864197530863,
+    "rig_multiview_only_coverage": 0.0057966820987654325,
+    "unknown_coverage": 0.011851851851851851,
+    "final_visual_coverage": 1.0,
+    "final_visual_hole_free": true,
+    "unknown_reason_counts": {
+     "CURRENT_REJECTED": 0,
+     "MANIFOLD_REJECTED": 0,
+     "MULTIVIEW_REJECTED": 144,
+     "NO_OBSERVATION": 5579,
+     "OTHER_UNKNOWN": 0,
+     "RASTER_SUPPORT_REJECTED": 391,
+     "TEMPORAL_REJECTED": 30
+    },
+    "unknown_reason_regions": {
+     "border_10pct": {
+      "pixels": 186624,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 39,
+       "NO_OBSERVATION": 1735,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 67,
+       "TEMPORAL_REJECTED": 9
+      },
+      "unknown_pixels": 1850,
+      "unknown_ratio": 0.009912980109739369
+     },
+     "far_neighborhood_gt_40m": {
+      "pixels": 57550,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 28,
+       "NO_OBSERVATION": 962,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 61,
+       "TEMPORAL_REJECTED": 22
+      },
+      "unknown_pixels": 1073,
+      "unknown_ratio": 0.018644656820156386
+     },
+     "full": {
+      "pixels": 518400,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 144,
+       "NO_OBSERVATION": 5579,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 391,
+       "TEMPORAL_REJECTED": 30
+      },
+      "unknown_pixels": 6144,
+      "unknown_ratio": 0.011851851851851851
+     }
+    },
+    "candidate_coverage": {
+     "any_accepted": 0.9530150462962963,
+     "any_raw": 0.9314949845679013,
+     "current_accepted": 0.8919810956790123,
+     "current_raw": 0.856977237654321,
+     "manifold_accepted": 0.0,
+     "manifold_raw": 0.0,
+     "multiview_accepted": 0.024405864197530863,
+     "multiview_raw": 0.5095466820987654,
+     "rig_multiview_accepted": 0.006768904320987654,
+     "rig_multiview_raw": 0.23769675925925926,
+     "temporal_accepted": 0.02985918209876543,
+     "temporal_raw": 0.38850694444444445
+    },
+    "rig_multiview_guard": {
+     "accepted_components": 2066,
+     "accepted_pixels": 3005,
+     "camera": "CAM_FRONT_WIDE",
+     "candidate_components": 2454,
+     "candidate_pixels": 3509,
+     "depth_tolerance": "max(0.25m, 0.04 * depth)",
+     "enabled": true,
+     "link_radius_px": 2,
+     "minimum_boundary_pixels": 2,
+     "minimum_depth_agreement": 0.75,
+     "rejected_boundary_support_components": 0,
+     "rejected_depth_agreement_components": 386,
+     "rejected_no_boundary_components": 2
+    },
+    "se3_information_domain": {
+     "counts": {
+      "HARD_SE3": 15003,
+      "ROTATION_DOMINANT_FINITE": 36860,
+      "SO3_SKY": 68764,
+      "SOFT_SE3": 392591,
+      "VISUAL_ONLY_UNKNOWN": 5182
+     },
+     "domain_legend": {
+      "0": "VISUAL_ONLY_UNKNOWN",
+      "1": "HARD_SE3",
+      "2": "SOFT_SE3",
+      "3": "ROTATION_DOMINANT_FINITE",
+      "4": "SO3_SKY"
+     },
+     "enabled": true,
+     "exports_depth_pixels": 444454,
+     "fractions": {
+      "HARD_SE3": 0.028940972222222222,
+      "ROTATION_DOMINANT_FINITE": 0.0711033950617284,
+      "SO3_SKY": 0.1326466049382716,
+      "SOFT_SE3": 0.7573128858024691,
+      "VISUAL_ONLY_UNKNOWN": 0.009996141975308641
+     },
+     "generated_geometry_policy": "translation_weight=0; rotation_weight=0; exports_depth=false",
+     "pixel_uncertainty_median": 1.2392017841339111,
+     "rigid_renderable_pixels": 444454,
+     "rotation_weight_mean": 0.13091285526752472,
+     "se3_eligible_pixels": 444262,
+     "translation_weight_mean": 0.2449580878019333
+    },
+    "elapsed_s": 15.021303653717041,
+    "urls": {
+     "comparison": "/renders/20260813_194757_07b8e723_comparison.jpg",
+     "depth_projection": "/renders/20260813_194757_07b8e723_depth_projection.jpg",
+     "final_hole_free_rgb": "/renders/20260813_194757_07b8e723_visual_compensation.jpg",
+     "gs_fill": "/renders/20260813_194757_07b8e723_gs_fill.jpg",
+     "gs_fill_depth": "/renders/20260813_194757_07b8e723_gs_fill_depth.jpg",
+     "hybrid_source_map": "/renders/20260813_194757_07b8e723_hybrid_source_map.jpg",
+     "lidar_projection": "/renders/20260813_194757_07b8e723_lidar_projection.jpg",
+     "reconstruction": "/renders/20260813_194757_07b8e723_reconstruction.jpg",
+     "reconstruction_depth": "/renders/20260813_194757_07b8e723_reconstruction_depth.jpg",
+     "reconstruction_depth_surfel": "/renders/20260813_194757_07b8e723_reconstruction_depth_surfel.jpg",
+     "reconstruction_surfel": "/renders/20260813_194757_07b8e723_reconstruction_surfel.jpg",
+     "rotation_weight_map": "/renders/20260813_194757_07b8e723_rotation_weight_map.jpg",
+     "se3_domain_map": "/renders/20260813_194757_07b8e723_se3_domain_map.jpg",
+     "source": "/renders/20260813_194757_07b8e723_source.jpg",
+     "translation_weight_map": "/renders/20260813_194757_07b8e723_translation_weight_map.jpg",
+     "unknown_reason_map": "/renders/20260813_194757_07b8e723_unknown_reason_map.jpg",
+     "visual_comparison": "/renders/20260813_194757_07b8e723_visual_comparison.jpg",
+     "visual_compensation": "/renders/20260813_194757_07b8e723_visual_compensation.jpg",
+     "visual_source_map": "/renders/20260813_194757_07b8e723_visual_source_map.jpg"
+    }
+   },
+   {
+    "camera": "CAM_FRONT_NARROW",
+    "record_id": "20260813_194828_6bc54452",
+    "T_L_Ci_view": "withheld: derived from source calibration not redistributed",
+    "T_Ci_L_view": "withheld: derived from source calibration not redistributed",
+    "coverage": 0.8876195987654321,
+    "surfel_coverage": 0.8872048611111111,
+    "multiview_only_coverage": 0.012766203703703703,
+    "rig_multiview_only_coverage": 0.002004243827160494,
+    "unknown_coverage": 0.11279513888888888,
+    "final_visual_coverage": 1.0,
+    "final_visual_hole_free": true,
+    "unknown_reason_counts": {
+     "CURRENT_REJECTED": 0,
+     "MANIFOLD_REJECTED": 0,
+     "MULTIVIEW_REJECTED": 58,
+     "NO_OBSERVATION": 57573,
+     "OTHER_UNKNOWN": 0,
+     "RASTER_SUPPORT_REJECTED": 470,
+     "TEMPORAL_REJECTED": 372
+    },
+    "unknown_reason_regions": {
+     "border_10pct": {
+      "pixels": 186624,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 10,
+       "NO_OBSERVATION": 15554,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 152,
+       "TEMPORAL_REJECTED": 43
+      },
+      "unknown_pixels": 15759,
+      "unknown_ratio": 0.08444251543209877
+     },
+     "far_neighborhood_gt_40m": {
+      "pixels": 134569,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 56,
+       "NO_OBSERVATION": 29493,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 162,
+       "TEMPORAL_REJECTED": 317
+      },
+      "unknown_pixels": 30028,
+      "unknown_ratio": 0.2231420312256166
+     },
+     "full": {
+      "pixels": 518400,
+      "reasons": {
+       "CURRENT_REJECTED": 0,
+       "MANIFOLD_REJECTED": 0,
+       "MULTIVIEW_REJECTED": 58,
+       "NO_OBSERVATION": 57573,
+       "OTHER_UNKNOWN": 0,
+       "RASTER_SUPPORT_REJECTED": 470,
+       "TEMPORAL_REJECTED": 372
+      },
+      "unknown_pixels": 58473,
+      "unknown_ratio": 0.11279513888888888
+     }
+    },
+    "candidate_coverage": {
+     "any_accepted": 0.8322723765432098,
+     "any_raw": 0.8128915895061728,
+     "current_accepted": 0.8061033950617283,
+     "current_raw": 0.7811246141975309,
+     "manifold_accepted": 0.0,
+     "manifold_raw": 0.0,
+     "multiview_accepted": 0.012766203703703703,
+     "multiview_raw": 0.15696180555555556,
+     "rig_multiview_accepted": 0.0030111882716049383,
+     "rig_multiview_raw": 0.037330246913580244,
+     "temporal_accepted": 0.01039158950617284,
+     "temporal_raw": 0.11712384259259259
+    },
+    "rig_multiview_guard": {
+     "accepted_components": 1002,
+     "accepted_pixels": 1039,
+     "camera": "CAM_FRONT_NARROW",
+     "candidate_components": 1511,
+     "candidate_pixels": 1561,
+     "depth_tolerance": "max(0.25m, 0.04 * depth)",
+     "enabled": true,
+     "link_radius_px": 2,
+     "minimum_boundary_pixels": 2,
+     "minimum_depth_agreement": 0.9,
+     "rejected_boundary_support_components": 1,
+     "rejected_depth_agreement_components": 463,
+     "rejected_no_boundary_components": 45
+    },
+    "se3_information_domain": {
+     "counts": {
+      "HARD_SE3": 3438,
+      "ROTATION_DOMINANT_FINITE": 161708,
+      "SO3_SKY": 14093,
+      "SOFT_SE3": 284849,
+      "VISUAL_ONLY_UNKNOWN": 54312
+     },
+     "domain_legend": {
+      "0": "VISUAL_ONLY_UNKNOWN",
+      "1": "HARD_SE3",
+      "2": "SOFT_SE3",
+      "3": "ROTATION_DOMINANT_FINITE",
+      "4": "SO3_SKY"
+     },
+     "enabled": true,
+     "exports_depth_pixels": 449995,
+     "fractions": {
+      "HARD_SE3": 0.006631944444444445,
+      "ROTATION_DOMINANT_FINITE": 0.3119367283950617,
+      "SO3_SKY": 0.027185570987654322,
+      "SOFT_SE3": 0.549477237654321,
+      "VISUAL_ONLY_UNKNOWN": 0.10476851851851852
+     },
+     "generated_geometry_policy": "translation_weight=0; rotation_weight=0; exports_depth=false",
+     "pixel_uncertainty_median": 2.9666385650634766,
+     "rigid_renderable_pixels": 449995,
+     "rotation_weight_mean": 0.07339229434728622,
+     "se3_eligible_pixels": 449434,
+     "translation_weight_mean": 0.07043768465518951
+    },
+    "elapsed_s": 30.74602770805359,
+    "urls": {
+     "comparison": "/renders/20260813_194828_6bc54452_comparison.jpg",
+     "depth_projection": "/renders/20260813_194828_6bc54452_depth_projection.jpg",
+     "final_hole_free_rgb": "/renders/20260813_194828_6bc54452_visual_compensation.jpg",
+     "gs_fill": "/renders/20260813_194828_6bc54452_gs_fill.jpg",
+     "gs_fill_depth": "/renders/20260813_194828_6bc54452_gs_fill_depth.jpg",
+     "hybrid_source_map": "/renders/20260813_194828_6bc54452_hybrid_source_map.jpg",
+     "lidar_projection": "/renders/20260813_194828_6bc54452_lidar_projection.jpg",
+     "reconstruction": "/renders/20260813_194828_6bc54452_reconstruction.jpg",
+     "reconstruction_depth": "/renders/20260813_194828_6bc54452_reconstruction_depth.jpg",
+     "reconstruction_depth_surfel": "/renders/20260813_194828_6bc54452_reconstruction_depth_surfel.jpg",
+     "reconstruction_surfel": "/renders/20260813_194828_6bc54452_reconstruction_surfel.jpg",
+     "rotation_weight_map": "/renders/20260813_194828_6bc54452_rotation_weight_map.jpg",
+     "se3_domain_map": "/renders/20260813_194828_6bc54452_se3_domain_map.jpg",
+     "source": "/renders/20260813_194828_6bc54452_source.jpg",
+     "translation_weight_map": "/renders/20260813_194828_6bc54452_translation_weight_map.jpg",
+     "unknown_reason_map": "/renders/20260813_194828_6bc54452_unknown_reason_map.jpg",
+     "visual_comparison": "/renders/20260813_194828_6bc54452_visual_comparison.jpg",
+     "visual_compensation": "/renders/20260813_194828_6bc54452_visual_compensation.jpg",
+     "visual_source_map": "/renders/20260813_194828_6bc54452_visual_source_map.jpg"
+    }
+   }
+  ],
+  "contact_sheet": "/renders/20260813_194828_rig_9bf21a_seven_camera_contact.jpg",
+  "elapsed_s": 141.21978950500488,
+  "rigid_constraint": "T_L_Ci_view = T_L_R_view @ T_R_Ci_mount"
+ }
+}

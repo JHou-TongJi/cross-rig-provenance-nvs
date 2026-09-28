@@ -1,0 +1,47 @@
+rig_id: l4_base
+vehicle_frame:
+  convention: x_forward_y_left_z_up
+  source_frame: ego
+cameras:
+  - name: CAM_FRONT_WIDE
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_WIDE
+    T_camera_from_vehicle: identity
+  - name: CAM_FRONT_NARROW
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_NARROW
+    T_camera_from_vehicle: identity
+  - name: CAM_FRONT_LEFT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_LEFT
+    T_camera_from_vehicle: identity
+  - name: CAM_FRONT_RIGHT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_RIGHT
+    T_camera_from_vehicle: identity
+  - name: CAM_BACK
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_BACK
+    T_camera_from_vehicle: identity
+  - name: CAM_BACK_LEFT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_BACK_LEFT
+    T_camera_from_vehicle: identity
+  - name: CAM_BACK_RIGHT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_BACK_RIGHT
+    T_camera_from_vehicle: identity

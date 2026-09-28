@@ -1,0 +1,20 @@
+TABSTART|Table 6. Metric set with measurement status. The status column is part of the result: a quantity marked unmeasured has no substitute reported in its place.|1.6,2.9,1.0|LLL
+TABHDR|Metric	Definition and denominator	Status
+TABROW|Camera success rate	Fraction of requested target cameras that produced a complete output bundle	Measured
+TABROW|Geometry coverage	Pixels with trusted structural support, over the full frame	Measured
+TABROW|Unknown fraction	Pixels with neither observed support nor gate acceptance, measured on the geometry export before any completion, over the full frame	Measured
+TABROW|Observed coverage	Pixels with traceable calibrated source RGB support, over the full frame	Measured
+TABROW|Gate fill of hole	Hole pixels accepted by the cycle gate, over the hole set	Measured
+TABROW|Generated fraction	Pixels written by the completion module, over the full frame	Measured proxy
+TABROW|Locked-pixel change	Count of observed pixels whose value changed; target is exactly zero	Measured
+TABROW|Vehicle risk in hole	Hole pixels intersecting vehicle regions, over the hole set	Measured
+TABROW|Final visual coverage	Pixels with a delivered colour, over the full frame; includes visual-only fill	Measured
+TABROW|Near-black artefact audit	Suspect pixels and largest connected component among replaced pixels	Measured
+TABROW|Coverage temporal spread	Standard deviation of geometry coverage over consecutive frames	Measured
+TABRULE|
+TABROW|Geometric error, semantic preservation, temporal anomaly rate	Depth MAE/RMSE against held-out LiDAR; feature similarity or mIoU on observed and gated pixels; optical-flow warping error and track continuity	Unmeasured
+TABROW|Artefact rate	Tears, ghosts and anomalous edges as connected components on the difference map	Proxy only
+TABROW|Downstream retention	Detection and segmentation performance on reprojected versus original data	Unmeasured
+TABRULE|
+TABROW|Target-view PSNR / SSIM / LPIPS	Photometric fidelity against a target-view reference	Not applicable
+TABEND|Not applicable differs from unmeasured: the three photometric scores are undefined without a target-view reference, and improvising one from the same-named source camera would reward copying the input (Section 7.4).

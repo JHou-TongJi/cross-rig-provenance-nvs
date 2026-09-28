@@ -1,0 +1,10 @@
+# Normalize to LF in the repository. The manuscript sources are written with LF
+# and compared line by line by the audit scripts, so letting the checkout
+# rewrite them would show every file as modified on a Windows clone.
+* text=auto eol=lf
+
+# Binary, never normalized or diffed as text.
+*.png binary
+*.pdf binary
+*.docx binary
+*.pptx binary

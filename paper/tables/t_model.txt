@@ -1,0 +1,11 @@
+TABSTART|Table 4. Learned modules of the released inference configuration. Parameter counts are obtained by instantiating the released code, not estimated. Frozen modules are used as published and are not fine-tuned on this data.|1.45,1.15,1.9,0.85,0.75|LLLCC|7.5
+TABHDR|Module	Architecture	Role and constraint	Params	State
+TABROW|Dense depth (DA3Metric-Large)	External ViT	Dense metric depth candidate; not ground truth, scale set by LiDAR	-	Frozen
+TABROW|Semantic encoder (DINOv2)	ViT-L/14 at 364 x 644; ViT-B/14 conditions the structure net	Semantic context and correspondence; writes no colour, no depth	-	Frozen
+TABROW|Feature upsampler (AnyUp)	Multi-backbone head	Restores high-resolution feature boundaries	-	Frozen
+TABROW|Structure network	4-stage U-Net, 48 base channels, 384-channel bottleneck, 3-layer global transformer	Corrects DA3 scale and surface residual under LiDAR; writes depth only, never colour, never overwrites an anchor	26.49 M	Trained
+TABROW|Residual decoder	Restormer-Small, dim 48, blocks (4, 6, 6, 8)	Predicts RGB residual, modification strength and log uncertainty; restricted to the mask of Equation (20)	26.18 M	Trained
+TABROW|Feature adapter	48 -> 32 channel Restormer adapter	Projects fused features for the decoder	0.09 M	Trained
+TABRULE|
+TABROW|**Trained total**			**52.76 M**	
+TABEND|The structure network takes 48 input channels, 16 geometric and 32 semantic, and emits four: log-residual, correction gate, confidence and depth-boundary probability. Its log-residual is bounded at 0.22, so a single forward pass can rescale a depth by at most about 25%. The released checkpoints were trained at 320 x 180 with 48 base channels and are frozen for every result in this paper.

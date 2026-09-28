@@ -1,0 +1,74 @@
+# UniWorld-View-inspired optional route.
+# Default inference remains deterministic T0/DA3.  Set video_diffusion.enabled
+# and backend=wan_vace only after the local condition adapter is implemented.
+experiment:
+  name: gcr_nvs_da3_uniview_optional_v1
+  seed: 20260825
+  stage: t0_da3_occlusion_guided_completion
+
+data:
+  sequence_manifest: /media/2T_HD/GCR-NVS_DATA/dense_route_manifest_188_v1/all_sequences.jsonl
+  sequence_split: /media/2T_HD/GCR-NVS_DATA/dense_route_manifest_188_v1/dense_route_split_v1.yaml
+  temporal_window: 3
+  max_real_frames_per_sequence: 80
+  synthetic_intermediate_frames: 150
+  keyframe_budget: 100
+  synthetic_frame_loss_weight: 0.20
+
+geometry:
+  depth_source: da3_depth_before_structure
+  lidar_role: metric_structure_visibility_only
+  temporal_lidar_role: gated_structure_compensation_only
+  temporal_alignment_rmse_gate_m: 0.20
+  temporal_alignment_inlier_gate: 0.40
+  triple_reprojection: true
+  triple_pixel_tolerance: 1.5
+  normal_visibility_filter: true
+  normal_cosine_threshold: 0.0
+  soft_z_buffer: true
+  preserve_current_lidar_points: true
+  dynamic_temporal_policy: current_frame_only
+
+appearance:
+  rgb_source: rectified_source_rgb
+  semantic_backbone: dinov2_vitl14
+  semantic_input_size: [364, 644]
+  semantic_upsampling: anyup
+  source_topology: strict_camera_family
+  observed_pixels_immutable: true
+
+completion:
+  backend: deterministic_local_rgbds
+  hole_only: true
+  observed_lock: true
+  masks:
+    recoverable_background: direct_rgb_sampling
+    true_disocclusion: learned_completion_only
+    out_of_fov: keep_invalid
+
+video_diffusion:
+  # Reserved for the future UniWorld-View condition adapter.  It is disabled
+  # so current runs do not import diffusers or allocate Wan/VACE memory.
+  backend: disabled
+  enabled: false
+  model_id: null
+  uniview_repo: /media/2T_HD/GCR-NVS_DATA/third_party/UniWorld-View
+  device: cuda
+  dtype: float16
+  max_frames: 16
+  inference_steps: 8
+  cpu_offload: true
+  local_files_only: true
+  hole_only: true
+  observed_lock: true
+
+memory:
+  current_gpu_gb: 24
+  deterministic_preview_resolution: [960, 540]
+  local_completion_resolution: [512, 288]
+  video_clip_frames_24gb: 8
+  video_clip_frames_48gb: 16
+  video_clip_frames_80gb: 32
+  gradient_checkpointing: true
+  vae_tiling: true
+  sequential_cpu_offload: true

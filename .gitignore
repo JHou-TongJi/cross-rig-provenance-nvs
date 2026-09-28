@@ -1,0 +1,28 @@
+# Model weights are referenced by controlled path, never committed. They are
+# also large enough (~300 MB each) to exceed GitHub's per-file limit.
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# Source-vehicle manufacturer calibration, withheld under the data-use
+# agreement. Listed by name because it has already turned up re-packaged under
+# a different one.
+camera_config.json
+camera_intric.yaml
+target_camera_module_7v.json
+
+# Raw sequence data, should any of it be staged here by accident
+*.pcd
+*.ply
+*.bag
+*.mp4
+
+# Build output and editor droppings
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+~$*
+manuscript.txt

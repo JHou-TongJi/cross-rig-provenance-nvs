@@ -1,0 +1,9 @@
+TABSTART|Table 3. The provenance partition and module permission matrix. The upper block is the three-way partition of Equation (7); the lower block lists two support states that are not labels of it.|1.35,1.55,0.9,0.9,1.6|LLCCL
+TABHDR|Class	Admission condition	Exports depth	SE(3) eligible	May be modified later by
+TABROW|**Observed**	Valid geometric correspondence to a calibrated source pixel	Yes	Yes	Nothing; excluded from the modification mask of Equation (20) and from the display polish, so locked byte-exactly
+TABROW|**Gate**	Hole pixel passing the source-target-source cycle, depth-ordering and dynamic-region tests	Yes	Conditional	Residual decoder of Equation (20) wherever the geometric budget is non-zero, and display polish; a gate pixel the decoder writes is relabelled generated and loses depth eligibility
+TABROW|**Generated**	Residual hole filled by the masked completion module	No	No	Display polish only
+TABRULE|
+TABROW|LiDAR anchor (support state)	Direct LiDAR return surviving the z-buffer; a subtype of observed	Yes	Yes	Nothing; locked as observed, and additionally restored byte-exactly after the polish as a redundant safeguard
+TABROW|Unknown (support state)	Hole rejected by the gate and not completed; empty in the delivered RGB	No	No	Exported as a mask; never written into RGB as evidence
+TABEND|

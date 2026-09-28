@@ -1,0 +1,5 @@
+# Install PyTorch from the official selector for the target CUDA version first.
+torch>=2.0
+torchvision>=0.15
+# Depth Anything 3 is installed from its official source/revision separately.
+# depth-anything-3

@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Data and outputs
+2026-*/
+*.pcd
+*.jpg
+*.png
+*.mp4
+*.avi
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+runs/
+data/
+outputs/checkpoints/*.pt
+outputs/generative_route
+outputs/geometry_teacher_temporal_r3_full
+outputs/da3_depth_cache*/
+outputs/da3_semantic_pilot/
+outputs/dataset_audits/
+outputs/calibration_reports/
+outputs/full_pipeline_visualization/
+third_party/anyup/checkpoints/
+outputs/reconstructions/
+outputs/visualizations/
+outputs/coarse/
+outputs/depth/
+outputs/masks/
+*.npy
+
+# Keep documentation images
+!outputs/architecture_*.png
+!outputs/network_*.png
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

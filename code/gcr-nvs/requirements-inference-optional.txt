@@ -1,0 +1,4 @@
+# Optional only: required for RGB-D-S A-only residual hole completion.
+# The deterministic T0/DA3 reconstruction does not import these packages.
+diffusers>=0.30,<0.33
+accelerate>=0.33,<1.0

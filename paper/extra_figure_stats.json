@@ -1,0 +1,28 @@
+{
+  "focal": {
+    "R1": {
+      "r_all": -0.703,
+      "r_without": -0.529
+    },
+    "R2": {
+      "r_all": -0.923,
+      "r_without": -0.624
+    }
+  },
+  "paths": {
+    "cameras": 7
+  },
+  "spread": {
+    "spreads": [
+      57.63,
+      49.99,
+      61.24
+    ],
+    "band_mean_spread": 16.52
+  },
+  "compliance": {
+    "cases": 21,
+    "locked_modified_total": 0,
+    "max_residual": 1.4210854715202004e-14
+  }
+}

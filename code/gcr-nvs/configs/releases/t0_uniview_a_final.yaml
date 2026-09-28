@@ -1,0 +1,46 @@
+release:
+  name: GCR-NVS-T0-UniWorld-A-2026.08.25
+  branch: release/gcr-nvs-inference-only-20260826
+  status: frozen_validated_default
+
+data:
+  manifest: /media/2T_HD/GCR-NVS_DATA/dense_route_manifest_188_v1/all_sequences.jsonl
+  split: /media/2T_HD/GCR-NVS_DATA/dense_route_manifest_188_v1/dense_route_split_v1.yaml
+  source_root: /media/2T_HD/GCR-NVS_DATA/sequences
+  sequence_split: true
+  cameras: [CAM_BACK, CAM_BACK_LEFT, CAM_BACK_RIGHT, CAM_FRONT_LEFT, CAM_FRONT_NARROW, CAM_FRONT_RIGHT, CAM_FRONT_WIDE]
+
+preprocess:
+  rectify_rgb: true
+  calibration_distortion: zero_after_newK
+  da3_model: /home/heqing/models/depth-anything-3/DA3Metric-Large
+  da3_cache: /media/2T_HD/GCR-NVS_DATA/outputs/da3_depth_cache_dense_train_v1
+  dino_model: dinov2_vitl14
+  dino_input_size: [364, 644]
+  structure_checkpoint_dino: dinov2_vitb14
+  anyup_checkpoint: /media/2T_HD/GCR-NVS_DATA/t0_baseline_isolated_20260823/outputs/checkpoints/anyup_multi_backbone.pth
+
+geometry:
+  structure_checkpoint: /media/2T_HD/GCR-NVS_DATA/t0_baseline_isolated_20260823/checkpoints/t0_structure_rectified_v2_dinob14_320x180_c48_best.pt
+  current_lidar_priority: 1.0
+  temporal_lidar: gated_structure_compensation_only
+  rgb_depth_source: da3_aligned_surface
+  target_poses: [mixed_5_10cm, mixed_10_20cm, mixed_20_50cm]
+  triple_reprojection: true
+  soft_z_buffer: true
+
+appearance:
+  source_rgb: rectified_source_rgb
+  source_topology: strict_camera_family
+  observed_pixels_immutable: true
+
+completion:
+  route: a
+  adapter_checkpoint: /media/2T_HD/GCR-NVS_DATA/outputs/checkpoints/t0_rgbds_adapter_a_256x64_v2/adapter_step_001000.pt
+  hole_only: true
+  observed_lock: true
+
+video_diffusion:
+  backend: disabled
+  enabled: false
+  model_id: null

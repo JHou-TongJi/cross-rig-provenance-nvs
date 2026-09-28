@@ -1,0 +1,6 @@
+TABSTART|Table 13. Evidence budget of the delivered A-ONLY image as a share of the target frame. The three provenance classes are mutually exclusive and exhaustive.|1.5,1.4,1.4,1.4,1.2
+TABHDR|Perturbation band	Observed and locked (%)	Gate-recovered (%)	Generated (%)	Sum (%)
+TABROW|5-10 cm	99.320	0.309	0.371	100.000
+TABROW|10-20 cm	98.592	0.585	0.823	100.000
+TABROW|20-50 cm	96.795	1.105	2.100	100.000
+TABEND|The columns sum to 100% at every band: each delivered pixel is observed, gate-recovered or generated. The unknown mask is empty in the delivered RGB but still exported.

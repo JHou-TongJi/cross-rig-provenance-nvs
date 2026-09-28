@@ -1,0 +1,89 @@
+# Simulation-only target rig for the competition sample.
+# The organizer did not provide an L4 vehicle calibration.  Intrinsics and
+# optical directions are inherited from the captured passenger-car cameras;
+# the offsets below place the same seven-camera topology on a 3.7 m x 1.4 m
+# x 2.0 m delivery vehicle. Replace every inherited transform with measured
+# extrinsics before any real-vehicle deployment.
+rig_id: l4_simulated_3700x1400x2000
+simulation_only: true
+calibration_source: passenger_vehicle_prior
+vehicle:
+  length_m: 3.7
+  width_m: 1.4
+  height_m: 2.0
+  sensor_roof_height_m: source_camera_center_plus_0.25m
+vehicle_frame:
+  convention: x_forward_y_left_z_up
+  source_frame: ego
+  origin: vehicle_geometric_center
+  assumptions:
+    - "camera optical directions and focal roles inherit the seven captured cameras"
+    - "target camera centers are symmetric around y=0 where the source topology permits"
+    - "target camera z equals each source camera center z plus 0.25 m; absolute height is not measured"
+output:
+  width: 1920
+  height: 1080
+cameras:
+  - name: CAM_FRONT_WIDE
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_WIDE
+    vehicle_offset_m: [0.0, 0.0, 0.25]
+    intrinsic_focal_scale: 1.01
+    principal_point_offset_px: [0.0, 0.0]
+    T_camera_from_vehicle: identity
+  - name: CAM_FRONT_NARROW
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_NARROW
+    vehicle_offset_m: [0.0, 0.0, 0.25]
+    intrinsic_focal_scale: 1.005
+    principal_point_offset_px: [0.0, 0.0]
+    T_camera_from_vehicle: identity
+  - name: CAM_FRONT_LEFT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_LEFT
+    vehicle_offset_m: [0.0, 0.0, 0.25]
+    intrinsic_focal_scale: 1.01
+    principal_point_offset_px: [0.0, 0.0]
+    T_camera_from_vehicle: identity
+  - name: CAM_FRONT_RIGHT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_FRONT_RIGHT
+    vehicle_offset_m: [0.0, 0.0, 0.25]
+    intrinsic_focal_scale: 1.01
+    principal_point_offset_px: [0.0, 0.0]
+    T_camera_from_vehicle: identity
+  - name: CAM_BACK
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_BACK
+    vehicle_offset_m: [0.0, 0.0, 0.25]
+    intrinsic_focal_scale: 1.01
+    principal_point_offset_px: [0.0, 0.0]
+    T_camera_from_vehicle: identity
+  - name: CAM_BACK_LEFT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_BACK_LEFT
+    vehicle_offset_m: [0.0, 0.0, 0.25]
+    intrinsic_focal_scale: 1.01
+    principal_point_offset_px: [0.0, 0.0]
+    T_camera_from_vehicle: identity
+  - name: CAM_BACK_RIGHT
+    model: pinhole_brown
+    width: 1920
+    height: 1080
+    inherit_source_camera: CAM_BACK_RIGHT
+    vehicle_offset_m: [0.0, 0.0, 0.25]
+    intrinsic_focal_scale: 1.01
+    principal_point_offset_px: [0.0, 0.0]
+    T_camera_from_vehicle: identity

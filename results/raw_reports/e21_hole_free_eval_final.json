@@ -1,0 +1,75 @@
+{
+  "experiment": "E21_hole_free_visual",
+  "definition": "100% final visual coverage and no structural near-black component inside pixels changed from the geometry image",
+  "parameters": {
+    "black_threshold": 8,
+    "change_threshold": 8,
+    "max_black_component": 9
+  },
+  "passed": true,
+  "rows": [
+    {
+      "camera": "CAM_BACK_LEFT",
+      "geometry_coverage": 0.9506500771604939,
+      "final_visual_coverage": 1.0,
+      "replaced_pixels": 44116,
+      "suspect_near_black_replaced_pixels": 117,
+      "largest_suspect_near_black_component": 2,
+      "passed": true
+    },
+    {
+      "camera": "CAM_FRONT_LEFT",
+      "geometry_coverage": 0.9767091049382716,
+      "final_visual_coverage": 1.0,
+      "replaced_pixels": 24669,
+      "suspect_near_black_replaced_pixels": 53,
+      "largest_suspect_near_black_component": 2,
+      "passed": true
+    },
+    {
+      "camera": "CAM_FRONT_RIGHT",
+      "geometry_coverage": 0.9727314814814815,
+      "final_visual_coverage": 1.0,
+      "replaced_pixels": 41883,
+      "suspect_near_black_replaced_pixels": 9,
+      "largest_suspect_near_black_component": 2,
+      "passed": true
+    },
+    {
+      "camera": "CAM_BACK_RIGHT",
+      "geometry_coverage": 0.8949266975308642,
+      "final_visual_coverage": 1.0,
+      "replaced_pixels": 103190,
+      "suspect_near_black_replaced_pixels": 33,
+      "largest_suspect_near_black_component": 2,
+      "passed": true
+    },
+    {
+      "camera": "CAM_BACK",
+      "geometry_coverage": 0.914278549382716,
+      "final_visual_coverage": 1.0,
+      "replaced_pixels": 71885,
+      "suspect_near_black_replaced_pixels": 22,
+      "largest_suspect_near_black_component": 2,
+      "passed": true
+    },
+    {
+      "camera": "CAM_FRONT_WIDE",
+      "geometry_coverage": 0.9882503858024692,
+      "final_visual_coverage": 1.0,
+      "replaced_pixels": 21056,
+      "suspect_near_black_replaced_pixels": 8,
+      "largest_suspect_near_black_component": 1,
+      "passed": true
+    },
+    {
+      "camera": "CAM_FRONT_NARROW",
+      "geometry_coverage": 0.8876195987654321,
+      "final_visual_coverage": 1.0,
+      "replaced_pixels": 81734,
+      "suspect_near_black_replaced_pixels": 37,
+      "largest_suspect_near_black_component": 3,
+      "passed": true
+    }
+  ]
+}

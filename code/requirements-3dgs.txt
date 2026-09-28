@@ -1,0 +1,4 @@
+# Install PyTorch/CUDA and the official Gaussian Splatting repository separately.
+torch>=2.0
+plyfile>=0.8
+imageio>=2.30

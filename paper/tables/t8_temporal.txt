@@ -1,0 +1,8 @@
+TABSTART|Table 10. Framewise geometry-coverage variation over 20 consecutive key frames (24-43) for CAM_BACK_LEFT under rig R1, each reconstructed independently with no temporal smoothing.|2.6,1.7,1.7
+TABHDR|Statistic over frames 24-43	Geometry coverage (%)	Render time per frame (s)
+TABROW|Mean	94.42	17.53
+TABROW|Standard deviation	0.44	1.88
+TABROW|Minimum (frame 31)	93.37	14.92
+TABROW|Maximum (frame 39)	95.12	21.88
+TABROW|Peak-to-peak spread	1.75	6.96
+TABEND|Each frame is reconstructed once, so the 0.44-point standard deviation cannot be separated into scene content and reconstruction instability; that would need repeated runs on a fixed input. It is not a substitute for a temporal-consistency metric, which remains unmeasured.

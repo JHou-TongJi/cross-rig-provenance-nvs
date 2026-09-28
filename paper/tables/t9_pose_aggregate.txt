@@ -1,0 +1,9 @@
+TABSTART|Table 11. A-ONLY shifted-pose proxy metrics at frame 73, averaged over seven cameras per band. The first three rows aggregate seven cases each; the last two summarize all 21.|1.5,1.35,1.35,1.35,1.35,1.1
+TABHDR|Perturbation band	Observed cov. (%)	Gate fill of hole (%)	Generated / image (%)	Vehicle risk in hole (%)	Locked px changed
+TABROW|5-10 cm	99.32	54.86	0.37	5.18	0
+TABROW|10-20 cm	98.59	41.49	0.82	4.89	0
+TABROW|20-50 cm	96.79	38.34	2.10	4.76	0
+TABRULE|
+TABROW|**All 21 cases**	**98.24**	**44.90**	**1.10**	**4.94**	**0**
+TABROW|Worst value per column	92.19	11.70	5.67	28.00	0
+TABEND|Gate fill is a fraction of the hole; generated fraction is a fraction of the image. The last row takes each column independently, so its values need not come from one case.

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gcr-nvs"
+version = "0.6.0"
+description = "Geometry-first cross-vehicle multi-camera view reconstruction baseline"
+requires-python = ">=3.10"
+dependencies = ["numpy", "Pillow", "opencv-python", "PyYAML", "scipy"]
+
+[project.optional-dependencies]
+torch = ["torch", "torchvision"]
+inference = ["torch", "torchvision", "diffusers", "transformers", "accelerate"]
+metrics = ["lpips"]
+
+[project.scripts]
+gcr-nvs = "gcr_nvs.cli.main:main"
+gcr-nvs-evaluate = "gcr_nvs.evaluation.report:main"
+gcr-nvs-visualize = "gcr_nvs.evaluation.visualize:main"
+gcr-nvs-export = "gcr_nvs.evaluation.export:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

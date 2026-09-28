@@ -1,0 +1,12 @@
+﻿source_class,input,processing,exports_depth,se3_eligible,priority,trust_note
+lidar_anchor,LIDAR_CONCAT PCD,calibration projection and z-buffer,true,true,1,measured geometry
+current_rgbd,undistorted RGB plus LiDAR-aligned DA3,robust metric alignment and RGB-guided propagation,true,true,2,estimated depth; anchors restored
+temporal,same-camera neighboring frames,SE(3) warp and geometry gates,true,conditional,3,accepted only after consistency gates
+multiview,adjacent calibrated cameras,rigid-rig reprojection and visibility gates,true,conditional,4,fills geometry unknown only
+tsdf,LiDAR-anchored accepted charts,sparse TSDF zero-level rendering,true,conditional,5,hard anchors remain exact
+opencv_patch,local known RGB boundary,guarded Telea small-hole fill,false,false,6,visual output only
+3dgs,calibrated sequence RGB and trusted depth,Gaussian Splatting novel-view RGB,false,false,7,visual output only
+directional_background,semantic sky consensus from calibrated cameras,SO(3)-only directional warp,false,false,8,visual output only
+opencv_polish,composited visual RGB,"small impulse median, weak bilateral blend and unsharp mask",false,false,9,LiDAR anchors restored byte-exact; visual output only
+redistortion_export,pinhole-domain RGB and masks,Kraw plus Brown-Conrady distortion remap,false,false,10,display/export transform only; geometry remains in K-prime domain
+lama_visual_inpaint,geometry unknown mask excluding directional fill and LiDAR anchors,LaMa masked visual RGB repair,false,false,11,visual-only; strict mask composite; no depth or SE(3) eligibility

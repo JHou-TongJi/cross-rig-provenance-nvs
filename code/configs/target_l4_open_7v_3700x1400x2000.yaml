@@ -1,0 +1,54 @@
+schema_version: 1
+config_id: open_target_7v_3700x1400x2000_v1
+status: team_reference_open_target_preset
+
+# This is an open target-vehicle parameterization, not organizer-provided GT.
+# Replace vehicle and mount fields when authoritative target calibration arrives.
+vehicle:
+  type: reference_L4_low_speed_logistics_vehicle
+  dimensions_m:
+    length: 3.70
+    width: 1.40
+    height: 2.00
+  dimensions_source: public_reference_vehicle_specification
+  dimensions_include_sensor_housing: false
+  lidar_height_above_ground_m: 0.50
+  lidar_height_source: team_estimate_pending_organizer_confirmation
+
+coordinate_convention:
+  lidar: x_forward_y_left_z_up
+  camera: opencv_x_right_y_down_z_forward
+  external_semantics: T_C_L_maps_lidar_points_to_camera
+  camera_center_in_lidar: C_L = -R^T t
+  camera_height_above_ground: C_L_z + lidar_height_above_ground_m
+
+rig:
+  sensor_layout: seven_camera_rigid_rig
+  camera_count: 7
+  target_pose_parameter: T_L_R_view
+  camera_pose_rule: T_L_Ci_view = T_L_R_view @ T_R_Ci_mount
+  source_relative_mount_policy: preserve_source_7v_mount_geometry
+  source_calibration: config/camera_config.json
+  source_distortion: config/camera_intric.yaml
+
+cameras:
+  - CAM_BACK_LEFT
+  - CAM_FRONT_LEFT
+  - CAM_FRONT_RIGHT
+  - CAM_BACK_RIGHT
+  - CAM_BACK
+  - CAM_FRONT_WIDE
+  - CAM_FRONT_NARROW
+
+processing:
+  working_resolution: [960, 540]
+  output_fps: 2.0
+  geometry_track: lidar_anchor_current_ewa_temporal_rig_multiview_tsdf_surfel
+  visual_track: optional_3dgs_opencv_lama_rgb_only
+  eleven_camera_panorama: excluded
+
+limitations:
+  - Vehicle dimensions are a reference prior, not organizer-supplied calibration.
+  - Absolute ground height is estimated because the raw dataset has no lidar-to-ground transform.
+  - Camera intrinsics and relative mounts remain those of the supplied source 7V rig.
+  - This preset is open: another target vehicle can be represented by replacing dimensions and mounts.

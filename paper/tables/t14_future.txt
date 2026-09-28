@@ -1,0 +1,12 @@
+TABSTART|Table 7. The runs required to convert the present proxy evidence into a benchmark, in ascending order of collection cost.|1.3,1.75,1.5,1.7|LLLL|7.0
+TABHDR|Protocol	Procedure	New collection needed	What it would establish
+TABROW|P1. Strict leave-one-out	Hide one camera entirely; reconstruct from the other six plus LiDAR; use the hidden image only for evaluation	None	Task A capability with exact photometric ground truth, making PSNR, SSIM and LPIPS meaningful
+TABROW|P2. Nearest-source removal	Repeat the shifted-pose protocol with the nearest source camera removed from the input	None	Removes the same-name shortcut of Equation (19); isolates genuine cross-camera inference
+TABROW|P3. LiDAR holdout	Withhold a LiDAR subset from all constraints; evaluate depth against it in the target frame	None	Geometric accuracy: depth MAE and RMSE, boundary error, near / mid / far buckets
+TABROW|P4. Downstream retention	Run an unmodified perception stack on reprojected and original data and compare	None	Fitness for purpose, the criterion that matters most in production
+TABROW|P5. Component ablation	Disable the depth candidate, semantic features, anchor attention and residual decoder in turn, matched seeds, common target	None	The marginal contribution of each learned module
+TABROW|P6. Same-protocol baseline	Run a published reconstruction or synthesis system on this sequence, rig and metric set	None	Whether the evidence profile beats an off-the-shelf alternative on identical data
+TABROW|P8. Export-domain compliance	Export the rectified and redistorted rasters with the provenance mask; compare the delivered image against the locked reference carried through the same remap, and count cross-class contamination at class boundaries	None	Whether the byte-exact lock of Section 3.4 survives redistortion, and how much of any change is interpolation at class boundaries
+TABRULE|
+TABROW|P7. Synchronized double rig	Drive both platforms together with joint calibration and measured target poses	Yes	A true Task C benchmark with independent RGB and depth ground truth
+TABEND|

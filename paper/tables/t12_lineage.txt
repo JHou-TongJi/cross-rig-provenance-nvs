@@ -1,0 +1,15 @@
+TABSTART|Table 14. Data lineage classes with the provenance label of Equation (7) each produces. Classes are processing stages, a finer granularity than the partition of Table 3; the priority column also defines compositing order.|0.5,1.2,1.55,0.85,0.72,0.72,1.16|CLLCCCL|7.0
+TABHDR|Pri.	Class	Input and processing	Maps to Q(p)	Exports depth	SE(3) eligible	Trust note
+TABROW|1	LiDAR anchor	Calibrated projection and z-buffer	observed	Yes	Yes	Measured geometry
+TABROW|2	Current RGB-D	Rectified RGB with LiDAR-aligned dense depth	observed	Yes	Yes	Estimated depth; anchors restored
+TABROW|3	Temporal	Same-camera neighbouring frames, SE(3) warp and gates	gate	Yes	Conditional	Only after consistency gates
+TABROW|4	Multi-view	Adjacent cameras, rigid-rig reprojection, visibility gates	gate	Yes	Conditional	Fills geometry unknown only
+TABROW|5	TSDF	LiDAR-anchored charts, sparse zero-level rendering	gate	Yes	Conditional	Hard anchors remain exact
+TABROW|6	Small-hole patch	Guarded local fill bounded by known RGB	generated	No	No	Visual output only
+TABROW|7	Splatting appearance	Calibrated sequence RGB with trusted depth	generated	No	No	Visual output only
+TABROW|8	Directional background	Semantic sky consensus, rotation-only warp	generated	No	No	Visual output only
+TABROW|9	Masked inpainting	Unknown mask excluding directional fill and anchors	generated	No	No	Visual only; strict mask composite
+TABRULE|
+TABROW|10	Display polish	Impulse removal, bilateral blend, unsharp mask	none (transform)	No	No	Masked out of every observed pixel; anchors restored byte-exactly
+TABROW|11	Redistortion export	Pinhole-domain RGB and masks remapped with raw K, D	none (transform)	No	No	Display only; geometry stays in the rectified domain
+TABEND|Classes 1 to 5 may contribute to geometric exports; 6 to 11 may not, and none can alter a pixel labelled observed. Classes 10 and 11 carry no label because they transform an already-labelled image.

@@ -1,0 +1,9 @@
+artifact,role,path,status,license_or_note
+raw_dataset,188 sequences / RGB / PCD / camera_config,/media/2T_HD/GCR-NVS_DATA/incoming_sequences,external; source data not copied to Git,follow challenge data-use and privacy rules
+manifest,sequence/frame/camera lineage,/media/2T_HD/GCR-NVS_DATA/dense_route_manifest_188_v1/all_sequences.jsonl,external generated manifest,sequence-level split; no frame leakage
+rectified_rgb_da3_cache,Brown rectification + DA3 dense depth,/media/2T_HD/GCR-NVS_DATA/outputs/da3_depth_cache_dense_train_v1,external cache,"newK, D=0 internal raster"
+temporal_lidar_teacher,current/nearest temporal registered structure,/media/2T_HD/GCR-NVS_DATA/outputs/geometry_teacher_full_v1,external cache,LiDAR is geometry-only
+structure_checkpoint,T0StructureConstraintNet,/media/2T_HD/GCR-NVS_DATA/t0_baseline_isolated_20260823/checkpoints/t0_structure_rectified_v2_dinob14_320x180_c48_best.pt,frozen validated checkpoint,SHA256 in model registry
+a_only_checkpoint,RGB-D-S residual hole adapter,/media/2T_HD/GCR-NVS_DATA/outputs/checkpoints/t0_rgbds_adapter_a_256x64_v2/adapter_step_001000.pt,frozen validated checkpoint,hole-only; observed immutable
+single_frame_results,3 poses × 7 cameras A-ONLY,/media/2T_HD/GCR-NVS_DATA/outputs/evaluations/t0_uniview_rgbds_full_a_20260825,validated 21/21,source vs A-only DIFF available
+video_demo,80 real anchors → 240 FPS comparison,/media/2T_HD/GCR-NVS_DATA/outputs/videos_240fps_comparison_20260826_20cm/mixed_10_20cm,validated 1920x1080 / 39.5 s,"timestamp-aware linear interpolation, not new geometry"

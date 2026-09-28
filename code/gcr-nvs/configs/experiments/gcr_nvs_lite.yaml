@@ -1,0 +1,48 @@
+experiment:
+  name: gcr_nvs_lite_geometry_temporal_v1
+  seed: 20260807
+  stage: phase_3_temporal_refiner
+
+data:
+  target_camera_policy: balanced_leave_one_out
+  strict_target_camera_drop_all_times: true
+  temporal_window: 3
+  source_views_min: 3
+  source_views_max: 5
+  image_size: [544, 960]
+  valid_crop: [540, 960]
+
+geometry:
+  lidar_source: LIDAR_CONCAT
+  pose_source: local_icp
+  deskew: false_until_time_semantics_verified
+  max_range_m: 120
+  voxel_size_m: 0.08
+  max_anchors: 120000
+  top_k_observations: 3
+  dynamic_temporal_policy: current_frame_only
+
+renderer:
+  backend: deterministic_surfel
+  channels: 12
+  render_depth: true
+  render_normal: true
+  render_confidence: true
+  render_feature_channels: 32
+
+model:
+  type: lite_unet_convgru
+  input_channels: 48
+  base_channels: 48
+  max_rgb_residual: 0.25
+  use_confidence_gate: true
+
+train:
+  batch_size: 1
+  gradient_accumulation: 8
+  precision: fp16
+  optimizer: adamw
+  learning_rate: 0.0001
+  gradient_clip_norm: 1.0
+  warmup_steps: 1000
+  scheduler: cosine

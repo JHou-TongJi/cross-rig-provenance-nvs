@@ -1,6 +1,0 @@
-TABSTART|Table 2. Three task definitions frequently conflated in cross-rig reporting. The experiments here are Task B plus a geometric audit of a Task C configuration; no Task A result is reported.|1.05,1.75,1.6,1.6|LLLL
-TABHDR|Task	Definition	Ground truth available	What a good result proves
-TABROW|A. Strict leave-one-out	Hide camera j entirely; reconstruct it from the other six plus LiDAR	Yes, the hidden image itself	The model exploits neighbouring fields of view and geometry to synthesize an unseen direction
-TABROW|B. Same-name small-baseline	All seven cameras given; each target camera displaced to a nearby pose	No, but the same-name source view is nearly aligned	The target pose enters the projection correctly; extrinsics, depth and continuity are consistent
-TABROW|C. True cross-vehicle	Target cameras differ in position, orientation, intrinsics and field of view	No, unless a synchronized target platform was driven	The pipeline transfers a corpus to a new sensor configuration
-TABEND|Reporting a Task B number as though it answered Task A is the specific error this table exists to prevent.

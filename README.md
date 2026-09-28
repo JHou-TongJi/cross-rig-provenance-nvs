@@ -71,7 +71,7 @@ fitness for training a perception stack.
 ```
 code/       inference pipeline (GCR-NVS), rig configurations, environment files
 evidence/   derived evaluation results: CSV, redacted JSON run reports
-docs/       sensor, rig and data-scope documentation
+docs/       sensor, rig and data-scope documentation (see docs/README.md)
 tools/      contract property checker
 ```
 
